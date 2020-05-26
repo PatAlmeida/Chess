@@ -15,13 +15,18 @@ public class Square {
 
     }
 
+    public boolean hasPiece() { return hasPiece; }
+    public Piece getPiece() { return piece; }
+    public String getLocationString() { return locationStr; }
+
     public void setPiece(Piece myPiece) {
         hasPiece = true;
         piece = myPiece;
     }
 
     public String toString() {
-        return locationStr;
+        if (hasPiece) return " " + piece.getTextRepresentation() + " ";
+        else return " . ";
     }
 
 }
